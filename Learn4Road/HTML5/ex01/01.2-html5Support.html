@@ -1,0 +1,48 @@
+<!--					 让 HTML5 得到跨浏览器支持      			-->
+
+<!--1. 当浏览器不认识某些元素的时候-->
+<!--
+	浏览器会把这些元素处理成匿名的内联元素，并允许设定它们的样式
+-->
+
+
+
+<!--2. 让HTML5得到跨浏览器支持    shiv  -->
+<!--shiv 需要放到 <head> 元素中， shiv 依赖于启用JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <title> Styling Unknown Elements</title>
+                <!--[if lt IE 9 ]>
+                <script src="http://html5shiv.googlecode.com/svn/truck/html5.js"></script>
+                <![endif]-->
+                <style>
+                        time {
+                        font-style: italic;
+                        }
+                </style>
+        </head>
+
+        <body>
+                <p> Miss Baker made her historic journey on <time datetime="1959-05-28">May 28, 1959</time>.</p>
+        </body>
+
+</html>
+
+
+
+<!--3.声明块级元素 -->
+<!--  
+	因为浏览器会将未知的元素处理成匿名的内联元素，HTML5 引入了大量的块级元素；如果这些元素未包含在
+	浏览器的已知元素查找表里，那么～～～
+	so: 我们需要添加一个CSS规则，将它们声明为块级元素。
+-->
+	<style>
+		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+		section {
+		display: block;
+		}
+	</style>
+
+

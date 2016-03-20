@@ -1,0 +1,73 @@
+<!doctype html>
+	<head>
+		<html lang="en">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bootstrap3 css</title>
+
+		<style type="text/css">
+			/* 导入Bootstrap3 相关 Css */
+			@import url('http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.css');
+
+			/* 添加列的相关样式 */
+			.row div{
+				hieght: 200px;				
+			}
+
+			.row div:nth-child(even) {
+				background: #CCC;
+			}
+
+			.row div:nth-child(odd) {
+				background: #888;
+			}
+
+			#log {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: #333;
+				color: #fff;
+				padding:5px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function calculateWidth() {
+				 var devicewidth = $(window).width();
+				$('#log').html('设备屏幕宽度:' + devicewidth + "px");
+			}
+
+			calculateWidth();
+			$(window).resize(function() {
+				calculateWidth();
+			});
+		/* 以上javascript为了配合缩放浏览器更好的看出来bootstrap3的布局变化 */
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+
+		<div id="log">
+			<!-- 定义一个显示屏幕宽度的元素 -->
+		</div>
+
+		<script src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js">
+		</script>
+
+	</body>
+</html>
+

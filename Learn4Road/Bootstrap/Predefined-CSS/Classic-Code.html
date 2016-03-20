@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap.min.css">
+        <style>
+        	input {
+        		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        		-webkit-transition: box-shadow  linear 0.2s;
+        	}
+
+        	input:focus{
+        		-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0, 0, 8px rgba(82, 168, 236, 0.6);
+        	}
+        	/* 这里给  <input > 添加了少量的内阴影， 会让人感觉输入框有点下凹； 而在  :focus  状态下， 则会用  8 像素的
+        	      浅蓝色边框。 webkit-transition  告诉浏览器以  0.2  秒的时间匀速完成动画。
+        	*/
+        </style>
+    </head>
+    
+    <body>
+    <!-- Twitter 上精细微妙的输入框 -->
+    	<input class="input-xlarge"  id="focusedInput"  type="text"  value="This   is  focused.....">
+
+    	<!-- 禁用状态的输入框 -->
+    	<input class="input-xlarge" id="disabledInput"  type="text"  placeholder="Disabled input here......"    disabled>
+    </body>
+   </html>

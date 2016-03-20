@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap.min.css">
+         <script   src="../jquery-2.1.4.min.js"></script>
+        <script   src="../bootstrap.min.js"></script>
+
+     </head>
+
+     <body>
+<!-- 下拉菜单 -->
+<ul  class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenu">
+	<li><a tabindex="-1" href="#" >Action</a></li>
+	<li><a tabindex="-1" href="#">Another action</a></li>
+	<li><a tabindex="-1" href="#">Something else here </a></li>
+	<li class="divider"></li>   <!-- 水平分隔线 -->
+	<li><a tabindex="-1" href="#">Separated</a></li>	
+</ul>
+
+	<!-- 子菜单 -->
+	<!--  	只要在当前下拉菜单的任意 <li> 元素上添加  .dropdown-submenu 
+	-->
+	<!--  	要在 下拉菜单中使用按钮， 必须把按钮放在  .btn-toolbar 中独立的  .btn-group 中
+	 -->
+	 <!--   	要为按钮添加下拉菜单： 只需把按钮和下拉菜单包装在一个 .btn-group 中即可， 在
+	 	加一个 <span class="caret"> </span>， 就可以从视觉上告诉人们按钮包含下拉菜单
+	 	eg：
+	 		<div class="btn-group">
+	 			<button class="btn  btn-danger">Danger</button>
+	 			<button class="btn btn-danger  dropdown-toggle" data-toggle="dropdown">
+	 				<span class="caret"></span>
+	 			</button>
+	 			<ul class="dropdown-menu">
+	 				<li><a href="#">Action</a></li>
+	 				<li><a href="#">Another action</a></li>
+	 				<li><a href="#">Something else here </a></li>
+					<li class="divider"></li>
+					<li><a  href="#">Separated</a></li>	
+	 			</ul>
+	 		</div>
+	   -->
+	<!-- 	分隔式按钮下拉菜单
+		<div class="btn-group">
+	 			<button class="btn ">Danger</button>
+	 			<button class="btn dropdown-toggle" data-toggle="dropdown">
+	 				<span class="caret"></span>
+	 			</button>
+	 			<ul class="dropdown-menu">
+	 				.......
+	 			</ul>
+	 		</div>
+	 -->
+	 <!-- 	上拉菜单
+	 	只要在 .btn-group 容器中添加一个 .dropup 类就可以了。
+	 	如果还想让上拉菜单与开关按钮右侧对齐，需要在 .dripdown-menu 中再加一个 .pull-right 类4 
+	  -->
+
+  <!-- 导航元素-->
+  	<!-- 
+  		.nav-tabs   标签形导航
+  		.nav-pills    胶囊形导航
+  		这两个导航都是默认水平排列
+  		.nav-stacked 可以让导航垂直堆叠
+  	 -->
+  	 <!-- 	导航加下拉菜单
+  	 	eg：
+  	 		<ul class="nav nav-tabs">
+  	 			<li class="dropdown">
+  	 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	  	 				Dropdown
+	  	 				<b class="caret"></b>
+  	 				</a>
+  	 				<ul class="dropdown-menu">
+  	 					<li><a href="#">Action</a></li>
+		 				<li><a href="#">Another action</a></li>
+		 				<li><a href="#">Something else here </a></li>
+						<li class="divider"></li>
+						<li><a  href="#">Separated</a></li>	
+  	 				</ul>
+  	 			</li>
+  	 		</ul>
+  	  -->
+  	  <!-- 	导航列表
+  	  	<ul class="nav nav-list">
+  	  		<li class="nav-header"> List Header</li>
+  	  		<li class="active"><a href="/">Home</a</li>
+  	  		<li><a href="#">Action</a></li>
+		 	<li><a href="#">Another action</a></li>
+		 	<li class="nav-header">Another List Header</li>
+		 	<li><a href="#">Something else here </a></li>
+			<li class="divider"></li>
+			<li><a  href="#">Separated</a></li>	
+  	  	</ul>
+  	   -->
+  	   <!-- 	标签导航
+  	   	<div class="tabbable tabs-below">  //标签位于底部   	.table-left 标签显示在左侧【nav-tabs要和tab-content 位置互换】
+  	   		<div class="tab-content">
+  	   			<div class="tab-pane active" id="tab1">
+  	   				<p> I'm in Section A.</p>
+  	   			</div>
+  	   			<div class="tab-pane" id="tab2">
+  	   				<p> I'm in Section B. </p>
+  	   			</div>
+  	   			<div class="tab-pane" id="tab3">
+  	   				<p> I'm in Section C. </p>
+  	   			</div>
+  	   		</div>
+  	   		<ul class="nav nav-tabs">
+  	   			<li class="active"><a href="#tab1" data-toggle="tab">Section A </a></li>
+  	   			<li> <a href="#tab2" data-toggle="tab"> Section B </a></li>
+  	   			<li> <a href="#tab3" data-toggle="tab"> Section C </a></li>
+  	   		</ul>
+  	   	</div>
+  	    -->
+  	    <!-- 	导航条菜单
+  	    	在 .navbar 类后面在增加一个  .navbar-fixed-top   固顶导航条
+  	    					.navbar-fixed-bottom  固底导航条
+  	    					.navbar-static-top     静态滚动导航条
+  	     -->
+  	     <!-- 	响应式导航条
+  	     	还必须包含 bootstrap-responsive.css 和 collapse.js 或 完整的bootstrap.js 文件。
+  	     	<div class="header">
+  	     		<div class="navbar-inner">
+  	     			<div class="container">
+  	     				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  	     					<span class="icon-bar"></span>
+  	     					<span class="icon-bar"></span>
+  	     					<span class="icon-bar"></span>
+  	     				</a>
+
+  	     				<-   始终显示导航条的名字->
+  	     				<a href="#" class="brand" > Project Name </a>
+
+  	     				<- 把所有需要隐藏的项目添加到这里->
+  	     				<div class="nav-collapse collapse">
+  	     					<- .nav ,  .navbar-search 等等 ->
+  	     				</div>
+
+  	     			</div>
+  	     		</div>
+  	     	</div>
+  	      -->
+
+  	      <!-- 反色导航条  
+  	      	在 .navbar 类后面添加 .navbar-inverse 类
+  	       -->
+
+  	       <!-- 	   面包屑式导航
+  	       	    就是一个类为  .breadrumb  的无序列表
+  	        -->
+
+  	        <!--     分页导航
+  	        	包含在一个区别与其他元素的<div> 中的无序列表；
+  	        	最简单的的给 <div> 添加  .pagination 类， 就可以创建一个带边框的链接.
+  	        	无序列表中的每个列表项都可以使用 .disabled 或 .active 类进一步修饰。
+  	        	给<div > 添加 .pagination-centered 类， 使得分页导航居中。（.pagination-right  居右）
+  	        		.pagination-large ,  pagination-small,  .pagination-mini  调整大小
+
+  	         -->
+
+  	         <!--     前后页导航
+  	         		<ul class="pager">
+  	         			<li class="previous">
+  	         				<a href="#">&larr; Older </a>
+  	         			</li>
+  	         			<li class="next">
+  	         				<a href="#">Newer &rarr;</a>
+  	         			</li>
+  	         		</ul>
+  	          -->
+
+  	          <!--  标签
+  	          	.label-success , 	.label-warning ,	   .label-important ,     .label-info ,     .label-inverse
+		圆标签
+  	          	.badge-success , 	.badge-warning ,	   .badge-important ,     .badge-info ,     .badge-inverse
+  	           -->
+
+  	           <!-- 
+  	           	重头消息   .hero-unit
+  	           	页面标题   .page-header
+  	           	缩略图       .thumbnail
+  	           	警示框        .alert	
+  	           		要显示关闭警示框的按钮， 可以创建一个包含 data-dismiss="alert" 属性的按钮。移动版的 Safari 和 Opera 浏览器还需要加上
+  	           		href="#" 才行。
+  	           		.alert-block 会给包含消息的容器上/下多添加一些边距；
+  	           		.alert-error 	.alert-success 	.alert-info 	是会给警示框带有颜色的
+  	            -->
+
+  	            <!--      进度条    .bar    创建进度条
+  	            		给容器<div> 添加  .progress-striped	创建带条纹的进度条
+  	            		动态条纹版进度条：
+  	            			<div class="progress progress-striped active">
+  	            				<div class="bar"  style="width:40%;"></div>
+  	            			</div>
+  	            		.bar-success   .bar-warning     .bar-danger    拼接起来可为进度条构成某种图案
+  	             -->
+
+  	             <!--      媒体对象
+  	             		如果用 无序列表， 就用 .media-list 
+  	             			用<div> , 就用 .media
+  	             		eg :
+  	             			<ul  class="media-list">
+  	             				<li  class="media">
+  	             					<a class="pull-left"  href="#">
+  	             						<img class="media-object"  data-src="holder.js/64*64">
+  	             					</a>
+  	             					<div class="media-body">
+  	             						<h4 class="media-heading"> Media heading </h4>
+  	             						<p> ....</p>
+  	             						.....
+  	             						<- 嵌套的媒体对象->
+  	             						<div class="mdia">
+  	             						....
+  	             						</div>
+  	             					</div>
+  	             				</li>
+  	             			</ul>
+  	              -->
+
+  	              <!-- 
+  	              	洼地	.well
+  	              		.well-large	.well-small	这两个类影响内边距
+  	              	.pull-left      向左浮动
+  	              	.pull-right    向右浮动
+  	              	.clearfix        清除浮动
+  	               -->
+
+     </body>
+
+     </html>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap.min.css">
+    </head>
+    
+    <body>
+       <!-- 
+            <h1> 是36像素， <h6>是12像素， 正文是14像素。
+            if want 给标题添加行内级子标题，可以使用<small>
+            eg:
+                h1 small{
+                    font-size:24px;
+                    font-weight:normal;
+                    line-height:1;
+                    color:#999;
+                }
+
+            强调段落: 可以加上 class="lead";
+            <small 也可以使用<small>标签,文本会缩小到原来的大小的85%;
+            <strong> 会给相应的文本应用font-weight:blod;
+            <em> 生成斜体， 也是在文本中强调某些内容。
+            
+            强调的类：
+            class: mute, text-warning, text-error, text-info, text-success ;
+
+            缩写词：
+            <abbr> title属性中添加完整的内容;
+
+            地址：
+            <address>  默认：display:block;
+    
+            引用：
+            <blockquote>   标记引用来源可以用<small>, 人名可以用<cite>
+            要想让引用右对齐， 给<blockquote>添加 .pull-right 类，添加这个类之后，整个引用块都会浮动到右边。
+
+            列表： <ul> <ol> <dl>
+            无序<ul> , class="unstyled" 可以去掉列表前的点
+                ** 对于不想使用<br>标签的， 可以使用没有样式的无序列表来代替，将每一行都放到一个<li>标签中， 更能有效
+                    的传达文本的语义。
+            定义<dl> : <dt> <dd>
+                给<dl> 加上 class="dl-horizontal" 就可以让词条和解释并排显示。
+
+            代码：
+            <code> 用于行内代码;
+            <pre> 用于代码段;
+            使用这两个标签时， 一定要把代码中的左右尖括号替换成 &lt; &gt;
+
+            表格：
+                表格类：
+                .table 给<td>上方添加了边框;
+                .table-striped 为<tbody>中的表格行添加了条纹背景;
+                .table-bordered 为所有的单元格添加了边框， 为整个表格添加了圆角;
+                .table-hover 光标悬停的行会带有浅灰色的背景;
+                .table-condensed 减少一半的内边距，以紧缩表格;
+                表格行的类：
+                .success 绿  成功或积极的情形
+                .error   红  危险或消极
+                .warning 黄  警告
+                .info    蓝  用于代替默认样式
+
+              表单布局：
+                   搜索表单：
+                   	为<form> 添加 .form-search 类， 为 <input> 添加 .search-query  类，就创建了一个圆角输入框和一个行内提交按钮的搜索表单.
+                   	eg：
+                   		<form  class="form-search" >
+                   			<input type="text" class="input-medium search-query">
+                   			<button type="submit" class="btn"> Search </button>
+                   		</form>
+
+	     行内表单:
+	     	为 <form > 标签 添加 .form-inline 类， 使所有表单元素都出现在一行。
+
+	     横向表单：
+	     	* 为 <form> 元素添加 .form-horizontal 类；
+	     	* 把成对的标签和控件包装在类为 .control-group 的 <div > 中；
+	     	* 为其中每一个标签添加 .control-label 类；
+	     	* 把其中每一个控件包装在一个类为 .controls 的 <div> 中， 以便对其；
+	     	eg： 
+	     		<form class="form-horizontal">
+	     			<div class="contol-group">
+	     				<label class="control-label"  for="inputEmail" > Email </label>
+	     				<div class="controls">
+	     					<input type="text"  id="inputEmail"  palceholder="Email">
+	     				</div>
+	     			</div>
+
+	     			<div class="control-group">
+	     				<label class="control-label"   for="inputPassword" > Password </label>
+	     				<div class="controls">
+	     					<input type="password" id="inputPassword" placeholder="Password">
+	     				</div>
+	     			</div>
+
+	     			<div class="control-group">
+	     				<div class="controls">
+	     					<label class="checkbox">
+	     					<input type="checkbox"> Remember me 
+	     					</label>
+	     					<button type="submit" class="btn" > Sign in </button>
+	     				</div>
+	     			</div>
+	     		</form>
+		
+		表单的控件：
+			eg:
+				<label class="checkbox"> 	// 此处的class 中加入 .inline 可让复选框或单选按钮出现在一行。
+					<input type="checkbox" value="">
+					Option one is this and that-be sure to include why  it's great.
+				</label>
+
+			<select > - <option> 如果要选择多项， 在 <select > 中使用 multiple="multiple" ;
+
+			输入框中的前置和后置组件：
+				eg: 
+					-前置了 @ 的 <span>
+					<div class="input-prepend">
+						<span class="add-on"> @ </span>
+						<input class="span2" id="prependedInput"  type="text" placeholder="Username">
+					</div>
+
+					-后置了 .00 的 <span>
+					<div  class="input-append">
+						<input class="span2" id="appendedInput"  type="text" >
+						<span class="add-on"> .00 </span>
+					</div>
+
+					-前置 $ , 后置 .00
+					<div class="input-prepend  input-append">
+						<span class="add-on" >$</span>
+						<input class="span2"  id="appendedPrependedInput"  type="text" >
+						<span class="add-on"> .00 </span>
+					</div>
+					
+					-用  <button> 代替 <span>
+					<div class="input-append">
+						<input class="span2" id="appendedInputButtons"  type="text">
+						<button class="btn"  type="button" > Search </button>
+						<button class="btn"   type="button" > Options</button>
+					</div>
+
+			设置控件的大小：
+				.input-block-level 类 可以使输入框像块级元素一样占满容器；
+				设置控件大小，除了使用 .span*  ,  还可以使用一些类名:
+					.input-mini  ,	.input-small,	.input-medium,	   .input-large,	
+					.input-xlarge,	.input-xxlarge
+				使用 .span* , 如果想让多个输入控件位列于同一行，可以使用 .controls-row 
+				eg:
+					<div class="controls  controls-row" >
+						<input class="span4"  type="text"  placeholder=".span4" >
+						<input class="span1"   type="text"   placeholder=".span1">
+					</div>
+
+			.uneditable-input 可以展示一个不让用户输入的控件；
+			表单动作- - - 如果在  .from-horizontal  最后放上几个  .form-actions （按钮） 
+				这些按钮会自动与表单控件对其。
+				eg:
+					<div  class="form-actions" >
+						<button type="submit"  class="btn btn-primary" >Save Changes </button>
+						<button type="button"  class="btn" > Cancel </button>
+					</div>
+			帮助文本：	
+				-行内帮助
+					<input type="text"> <span class="help-inline" > Inline help text </span>
+				- 块级帮助
+					<input type="text"> <span class="help-block"> A longer block of help text that break
+						onto a new line and may extend beyound one line . </span>
+            
+            	按钮：
+		颜色按钮： btn 	,	btn  btn-primary,	btn  btn-info,	btn btn-success	,	btn  btn-warning,
+			        btn   btn-danger,	btn  btn-inverse	,	btn  btn-link
+		按钮大小： btn-large,	btn-small, 	btn-mini
+			块级按钮  .btn-block ,  此时按钮的宽度是 100%.
+		.disabled  禁用按钮	对于链接生成按钮，要禁用还需要javaScript 帮忙， 但按钮就不需要；
+	        
+                图片：
+                	.img-rounded  为图片的四角添加  border-radius: 6px  ;
+                	.img-circle  通过添加 border-radius: 500px 使图片变成圆形；
+                	.img-polaroid 会添加一点内边距和一条灰色的边框；
+
+                图标：
+                	GLYPHICONS提供
+                	使用编辑图标： <i  class="icon-edit"></i>
+                	使用白色图标： <i   class="icon-white" > </i>
+		eg:
+			-按钮组
+				<div  class="btn-toolbar">
+					<div class="btn-group">
+						<a class="btn" href="#" > <i  class="icon-align-left"></i></a>
+						<a class="btn " href="#"> <i  class="icon-align-center"></i></a>
+						<a class="btn"  href="#" > <i   class="icon-align-right"> </i></a>
+						<a class="btn"  href="#">  <i   classs="icon-align-justify"> </i></a>
+					</div>
+				</div>
+			-导航
+				<ul  class="nav  nav-list">
+					<li  class="active" > <a  href="#"> <i  class="icon-home   icon-white"></i> Home </a></li>
+					<li> <a href="#"> <i  class="icon-book" ></i> Library </a></li>
+					<li> <a href="#"> <i   class="icon-pencil"></i>Applications </a></li>  
+				</ul>
+        
+        -->
+    </body>
+</html>
+

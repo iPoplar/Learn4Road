@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap.min.css">
+         <script   src="../jquery-2.1.4.min.js"></script>
+        <script   src="../bootstrap.min.js"></script>
+        <title> 模态框</title>
+    </head>
+
+     <body>
+     <!-- 静态的模态框 -->
+     <div class="modal hide fade">
+     	<div class="modal-header">
+     		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+     			&times;
+     		</button>
+     		<h3>Modal header</h3>
+     	</div>
+     	<div class="modal-body">
+     		<p>One fine body.....</p>
+     	</div>
+     	<div class="modal-footer">
+     		<a href="#" class="btn">Close</a>
+     		<a href="#" class="btn btn-primary">Save changes</a>     		
+     	</div>
+     </div>
+     <!-- 
+     	关于模态框要重点关注3个类： .modal 只用来把一个<div> 标注为 模态框;
+     			.hide   告诉浏览器先把模态框隐藏起来，在用户单击触发装置时再显示；
+     			.fade	导致模态框从无到有或从有到无时， 以淡入淡出效果呈现。
+      -->
+      <!--  模态框 -->
+      	<!--  触发模态框的按钮 -->
+      	<a href="#myModal" role="button" class="btn" data-toggle="modal"> Launch demo modal </a>
+
+      	<!--  模态框 -->
+      	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      		<div class="modal-header">
+      			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+      				×
+      			</button>
+      			<h3 id="myModalLabel">Modal header</h3>
+      		</div>
+      		<div class="modal-body">
+      			<p>One fine body...</p>
+      		</div>
+      		<div class="modal-footer">
+      			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      			<button class="btn btn-primary">Save changes</button>
+      		</div>      		
+      	</div>
+     </body>
+</html>
+<!-- 	用法：
+	在作为开关的链接按钮上设置 data-toggle="modal" , 再把 data-target="#foo" 设置为模态框的ID
+	要通过JavaScript 调用 id="myModal" 的模态框， just need one line code:
+		$('#myModal').modal(options);
+
+	选项：
+		backdrop	keyboard	show	remote
+
+	方法：
+		1. 选项：   将内容激活为模态框， 接受可选的选项对象。
+			.modal(options).
+				$('#myModal').modal({
+					keyboard: false;
+				})
+
+		2.开关：    手动开关模态框
+			.modal('toggle').
+				$('#myModal').modal('toggle');
+
+		3.显示： 手动打开模态框
+			.modal('show').
+				$('#myModal').modal('show');
+
+		4.关闭： 手动关闭模态框
+			.modal('hide').
+				$('#myModal').modal('hide');
+	事件：
+		show	shown	  hide      hidden
+
+	eg: 	模态框关闭后弹出一个警告框
+		$('#myModal').on('hidden', function() {
+			alert('Hey girl, I heard you like modals.....');
+		})
+
+ -->
+

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../bootstrap.min.css">
+         <script   src="../jquery-2.1.4.min.js"></script>
+        <script   src="../bootstrap.min.js"></script>
+
+     </head>
+
+     <body>
+     	<!--  下拉菜单 -->
+     		<!-- 
+     			要使用下拉菜单， 给一个链接或按钮添加 data-toggle="dropdown" 属性。
+     			如果想让链接任何时候都可以打开，就用 data-target="#" 代替 href="#" ,并给href 属性指定链接。
+
+     			通过JavaScript 调用 下拉菜单， 使用如下代码：
+     				$('.dropdown-toggle').dropdown()
+
+     			方法： 在代码里打开或隐藏下拉菜单， 没有选项
+     				$().dropdown('toggle')
+     		-->
+
+     	<!--  滚动监控器 -->
+     		<!-- 
+     			如果要监控页面主体， 需要给<body> 标签添加 data-spy="scroll" , 以及一个 data-target=".navbar" 属性， 当然这个
+     			data-target 指向显示导航链接的导航条：
+     				<body data-spy="scroll" data-target=".navbar"> ...</body>
+     			在导航条中，需要让每个链接都充当页面中的锚点 （ID）的指示器(href)：
+     				<div class="navbar">
+     					<div class="navbar-inner">
+     						<div class="container">
+     							<a class="brand" href="#"> Jake's BBQ</a>
+     							<div class="nav-collapse">
+     								<ul class="nav">
+     									<li class="active"> <a href="#"> Home </a></li>
+     									<li ><a href="#pork">Pork</a></li>
+     									<li><a href="#beef">Beef</a></li>
+     									<li><a href="#chicken">Chicken</a></li>
+     								</ul>
+     							</div>   <-  /.nav-collapse->
+     						</div>
+     					</div>    <- /navbar-inner->
+     				</div>
+			
+			JavaScirpt 使用：
+				$('#navbar').scrollsay();
+			
+			//.scrollspy('refresh') 更新DOM， 这样可以反映最新的DOM结构
+			$('[data-spy]="scroll"').each(function() {
+				var $spy = $(this).scrollspy('refresh');
+			});
+
+		选项：	offset
+		事件：activate
+     		 -->
+
+     	<!--  可切换的标签页 -->
+     		<!-- 
+     			通过 JavaScript 激活标签页：	
+     				$('#myTab   a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+     				})
+     			//切换到个别标签页的不同方式：
+     				$('myTab   a[href="#profile"]').tab('show');   //按照标签名称选择标签页
+     				$('myTab   a:first').tab('show');   //选择第一个标签页
+     				$('myTab   li:eq(2)  a').tab('show');    //选择第三个标签页（索引0 为第一个）
+
+     			事件：
+     				show	 shown
+     		 -->
+
+     	<!--  提示条 -->
+     		<!-- 
+     			eg:
+     				<a href="#"  rel="tooltip" title="This is the tooltip">Tooltip Example </a>
+     				$('#example').tootip(options);
+     			选项：
+     				animation	html        placement	selector	title    trigger 	delay    container
+     			方法：
+     				1.选项： 给一组元素添加提示条
+     					$().tooltip(options)
+
+     				2. 显示： 显示元素的提示条
+     					$('#element').tooltip('show')
+
+     				3. 隐藏： 隐藏元素的提示条
+     					$('#element').tooltip('hide')
+
+     				4. 开关： 开关元素的提示条
+     					$('#element').tooltip('toggle')
+
+     				5. 销毁： 隐藏并销毁元素的提示条
+     					$('#element').tooltip('destroy')
+     		 -->
+
+     	<!--  弹出层 -->
+     		<!-- 
+     			eg: 
+     				<a href="#" class="btn" rel="popover" title="Using Popover"  data-content="Just add content to the data-content attribute."> Click Me!</a>
+     			JavaScript 用法：
+     				$('#example').popover(options)
+     			选项：
+     				animation	html    placement    	selector 	trigger   title    content   delay   container
+     			方法：
+     				1.选项： 给一组元素添加 弹出层
+     					$().popover(options)
+
+     				2. 显示： 显示元素的 弹出层
+     					$('#element').popover('show')
+
+     				3. 隐藏： 隐藏元素的 弹出层
+     					$('#element').popover('hide')
+
+     				4. 开关： 开关元素的 弹出层
+     					$('#element').popover('toggle')
+
+     				5. 销毁： 隐藏并销毁元素的 弹出层
+     					$('#element').popover('destroy')
+     		 -->
+
+     	<!-- 警示框 -->
+     		<!-- 
+     			JavaScript 用法：
+     				$(".alert").alert();
+     			Data API ：
+     				< a class="close" data-dismiss="alert" href="#" > &times;</a>
+     			关闭方法：
+     				要让以动画方式关闭，要应用 .fade 和 .in 
+				$(".alert").alert('close')
+			事件：
+				close     closed
+     		 -->
+
+     	<!--  按钮 -->
+     		<!-- 
+     			加载状态： 给按钮添加 data-loading-text= "Loading..." 属性
+     			单选开关： data-toggle="button"
+     			复选开关：data-toggle="buttons-checkbox"
+     			单选按钮： data-toggle="button-radio"
+
+     			JavaScript 用法： $('.nav-tabs').button();
+
+     			方法：
+     				1. 开关： 切换状态，让人感觉按钮被按下了
+     					$().button('toggle')
+
+     				2. 加载： 加载过程中，按钮是禁用的， 显示的文本会变成data-loading-text
+     				属性的值：
+     					<button type="button" class="btn" data-loading-text="loading stuff...">...</button>
+
+     				3. 重置：
+     					$().button('reset');
+
+     				4. 字符串：
+     					传入这个字符串可以让按钮显示字符串：
+     						$().button('string');
+     					要重置按钮状态，显示新内容：
+     						<button type="button" class="btn" data-complete-text="finished!">
+     						......
+     						</button>
+
+     						<script>
+     							$('.btn').button('complete')
+     						</script>
+
+     		 -->
+
+     	 <!-- 折叠框 -->
+     	 	<!-- 
+     	 		给一个元素添加 data-toggle="collapse" 和 data-target 属性， 就能令其控制相应的可折叠元素。
+     	 		要指定类似折叠组元素，为每个可折叠的元素添加 data-parent="#selector".
+
+     	 		方法：
+     	 			1. 选项： 把元素激活为可折叠元素， 接受可选的选项对象
+     	 				.collapse(options)
+
+     	 			2. 开关：切换可折叠元素的状态：
+     	 				$('#myCollapsible').collapse({
+						toggle: false
+     	 				})
+     	 				.collapse('toggle')
+
+     	 			3. 显示：   .collapse('show')
+
+     	 			4. 隐藏： .collapse('hide')
+     	 		事件： show 	shown 	      hide 	hidden
+     	 	 -->
+
+     	 <!-- 传送带 -->
+     	 	<!-- 
+     	 		code：
+     	 			<div id="myCarousel" class="carousel slide">
+     	 				<- Carousel items ->
+     	 				<div class="carousel-inner">
+     	 					<div class="active item">
+     	 						<div class="item">
+     	 							.....
+     	 						</div>
+     	 						<div class="item">
+     	 							.....
+     	 						</div>
+     	 					</div>
+     	 				</div>
+     	 				<- Carousel nav ->
+     	 				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+     	 					&lsaquo; 
+     	 				</a>
+     	 				<a class="carousel-control right" href="#myCarousel" data-slide="next">
+     	 			</div>
+
+			方法：
+				以可选的选项对象初始化并启动传送带：
+					$('.carousel').carousel({
+						interval: 2000
+					})
+
+				.carousel() 传入不同的参数构成不同的方法：
+					cycle 轮播	pause 暂停	number 数值	prev  前一项 	next 后一项
+     	 	 -->
+     </body>
+ </html>
