@@ -1,0 +1,47 @@
+#tabBox{
+	width:750px;
+	height: 400px;
+	/* border: 1px solid black; */
+	 border-radius: 5px;
+	box-shadow: 0 0 10px #218dc9;
+	position: absolute;
+	top:80px;
+	left:350px;
+	z-index: 10;
+}
+
+#tabBox div{
+	width:750px;
+	height:348px;
+	margin:0;
+	padding:0;
+	font-size: 18px;
+  	color: #588BEA;
+  	list-style: none;
+  	padding: 0px;  	
+  	padding-top:20px;  	
+  	overflow:auto;
+}
+
+#tabBox div li{
+	padding-left: 20px;
+}
+.tab li{
+	 border-radius: 5px;
+	float: left;
+	width:33%;
+	height:50px;
+	background-color: rgba(255, 255, 255, 0.4);
+	font-size: 18px;
+  	color: #588BEA;	
+	text-align: center;
+	line-height: 50px;			
+}
+
+.on{
+	display: block;
+}
+
+.tab li.cur{
+	background-color: rgba(255, 255, 255, 0.8);
+}
