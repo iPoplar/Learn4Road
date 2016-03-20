@@ -1,0 +1,41 @@
+.bottom_box{
+	
+	width:1120px;
+	height:20%;
+	margin:0 auto;
+	position:fixed;
+	bottom: 0;	
+	left: 0;
+	right:0;	
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 24px;
+  	color: #296AE0;	
+  	display: none;
+}
+
+.bottom {	
+	text-align: center;
+	line-height: 30px;	
+}
+
+.bottom p{
+	padding-top: 20px;
+}
+
+.close{
+	 position:absolute;
+	 right:50px; 
+	 top:16px;
+	 width:18px;
+	 height:18px;
+	 background:url(../images/close.png) no-repeat;
+}
+
+.mini{ 
+	position:fixed;
+	bottom:0; 
+	right:20px; 
+	cursor:pointer;
+	z-index:1000; 
+	display:none;
+	}
