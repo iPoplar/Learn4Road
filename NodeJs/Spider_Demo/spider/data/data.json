@@ -1,0 +1,152 @@
+[
+    {
+        "title": "肖申克的救赎 / The Shawshank Redemption",
+        "star": "9.6",
+        "link": "http://movie.douban.com/subject/1292052/",
+        "picUrl": "http://localhost:3000/douban_files/p480747492.jpg"
+    },
+    {
+        "title": "这个杀手不太冷 / Léon",
+        "star": "9.4",
+        "link": "http://movie.douban.com/subject/1295644/",
+        "picUrl": "http://localhost:3000/douban_files/p511118051.jpg"
+    },
+    {
+        "title": "阿甘正传 / Forrest Gump",
+        "star": "9.4",
+        "link": "http://movie.douban.com/subject/1292720/",
+        "picUrl": "http://localhost:3000/douban_files/p510876377.jpg"
+    },
+    {
+        "title": "霸王别姬",
+        "star": "9.4",
+        "link": "http://movie.douban.com/subject/1291546/",
+        "picUrl": "http://localhost:3000/douban_files/p1910813120.jpg"
+    },
+    {
+        "title": "美丽人生 / La vita è bella",
+        "star": "9.5",
+        "link": "http://movie.douban.com/subject/1292063/",
+        "picUrl": "http://localhost:3000/douban_files/p510861873.jpg"
+    },
+    {
+        "title": "海上钢琴师 / La leggenda del pianista sull'oceano",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/1292001/",
+        "picUrl": "http://localhost:3000/douban_files/p511146957.jpg"
+    },
+    {
+        "title": "辛德勒的名单 / Schindler's List",
+        "star": "9.4",
+        "link": "http://movie.douban.com/subject/1295124/",
+        "picUrl": "http://localhost:3000/douban_files/p492406163.jpg"
+    },
+    {
+        "title": "千与千寻 / 千と千尋の神隠し",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/1291561/",
+        "picUrl": "http://localhost:3000/douban_files/p1910830216.jpg"
+    },
+    {
+        "title": "机器人总动员 / WALL·E",
+        "star": "9.3",
+        "link": "http://movie.douban.com/subject/2131459/",
+        "picUrl": "http://localhost:3000/douban_files/p449665982.jpg"
+    },
+    {
+        "title": "泰坦尼克号 / Titanic",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/1292722/",
+        "picUrl": "http://localhost:3000/douban_files/p457760035.jpg"
+    },
+    {
+        "title": "盗梦空间 / Inception",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/3541415/",
+        "picUrl": "http://localhost:3000/douban_files/p513344864.jpg"
+    },
+    {
+        "title": "三傻大闹宝莱坞 / 3 Idiots",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/3793023/",
+        "picUrl": "http://localhost:3000/douban_files/p579729551.jpg"
+    },
+    {
+        "title": "放牛班的春天 / Les choristes",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/1291549/",
+        "picUrl": "http://localhost:3000/douban_files/p1910824951.jpg"
+    },
+    {
+        "title": "忠犬八公的故事 / Hachi: A Dog's Tale",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/3011091/",
+        "picUrl": "http://localhost:3000/douban_files/p524964016.jpg"
+    },
+    {
+        "title": "龙猫 / となりのトトロ",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/1291560/",
+        "picUrl": "http://localhost:3000/douban_files/p1910829638.jpg"
+    },
+    {
+        "title": "教父 / The Godfather",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/1291841/",
+        "picUrl": "http://localhost:3000/douban_files/p1910907404.jpg"
+    },
+    {
+        "title": "大话西游之大圣娶亲 / 西遊記大結局之仙履奇緣",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/1292213/",
+        "picUrl": "http://localhost:3000/douban_files/p648365452.jpg"
+    },
+    {
+        "title": "乱世佳人 / Gone with the Wind",
+        "star": "9.2",
+        "link": "http://movie.douban.com/subject/1300267/",
+        "picUrl": "http://localhost:3000/douban_files/p1963126880.jpg"
+    },
+    {
+        "title": "天堂电影院 / Nuovo Cinema Paradiso",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/1291828/",
+        "picUrl": "http://localhost:3000/douban_files/p1910901025.jpg"
+    },
+    {
+        "title": "搏击俱乐部 / Fight Club",
+        "star": "9.0",
+        "link": "http://movie.douban.com/subject/1292000/",
+        "picUrl": "http://localhost:3000/douban_files/p1910926158.jpg"
+    },
+    {
+        "title": "当幸福来敲门 / The Pursuit of Happyness",
+        "star": "8.9",
+        "link": "http://movie.douban.com/subject/1849031/",
+        "picUrl": "http://localhost:3000/douban_files/p1312700628.jpg"
+    },
+    {
+        "title": "楚门的世界 / The Truman Show",
+        "star": "9.0",
+        "link": "http://movie.douban.com/subject/1292064/",
+        "picUrl": "http://localhost:3000/douban_files/p479681395.jpg"
+    },
+    {
+        "title": "指环王3：王者无敌 / The Lord of the Rings: The Return of the King",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/1291552/",
+        "picUrl": "http://localhost:3000/douban_files/p1910825503.jpg"
+    },
+    {
+        "title": "罗马假日 / Roman Holiday",
+        "star": "8.9",
+        "link": "http://movie.douban.com/subject/1293839/",
+        "picUrl": "http://localhost:3000/douban_files/p2173398296.jpg"
+    },
+    {
+        "title": "触不可及 / Intouchables",
+        "star": "9.1",
+        "link": "http://movie.douban.com/subject/6786002/",
+        "picUrl": "http://localhost:3000/douban_files/p1454261925.jpg"
+    }
+]
