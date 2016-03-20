@@ -1,0 +1,39 @@
+<h1><%=title %></h1>
+
+<% // error message
+if (typeof success != 'undefined' && !success) { %>
+<p style="color: red"><%=description %></p>
+<% } 
+
+else { %>
+<p><%=description %></p>
+<% } %>
+
+<% // only output the form if not posted, or unsuccessful
+if (typeof success == 'undefined' || !success) { %>
+
+<form method="post">
+  <div class="form-item">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required <%= typeof name !=
+'undefined' ? 'value="' + name + '"' : '' %>/>
+  </div>
+  
+  <div class="form-item">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required 
+<%= typeof email != 'undefined' ? 'value="' + email + '"' : '' %>/>
+  </div>
+  
+  <div class="form-item">
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" required><%= typeof message != 
+'undefined' ? message : '' %></textarea>
+  </div>
+  
+  <div class="form-item">
+    <input type="submit" value="Send" />
+  </div>
+</form>
+
+<% } %>
