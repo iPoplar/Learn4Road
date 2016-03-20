@@ -1,1 +1,0 @@
-Make sure to fill in the credentials for your SMTP server in routes/index.js
